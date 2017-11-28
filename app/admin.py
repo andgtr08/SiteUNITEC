@@ -89,7 +89,7 @@ class ArquivosQuestaoAdmin(admin.ModelAdmin):
 
 #Função Arquivos Resposta, e quais campos serão apresentados após criação
 class RespostaAdmin(admin.ModelAdmin):
-    list_display = ('questao', 'aluno', 'descricao')
+    list_display = ('questao', 'descricao')
 
 #Função Arquivo Resposta
 class ArquivosRespostaAdmin(admin.ModelAdmin):
