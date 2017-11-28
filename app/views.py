@@ -13,3 +13,6 @@ def index(request):
 
 def restrito(request):
     return render(request, "restrito.html")
+
+def ListaCurso(request):
+    return render(request, "ListaCursos.html")
