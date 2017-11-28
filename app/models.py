@@ -30,36 +30,36 @@ class UsuarioManager(BaseUserManager):
     def create_superuser(self, ra, password, **extra_fields):
         return self._create_user(ra, password, **extra_fields)
 
-class Usuario(AbstractBaseUser):
-    nome = models.CharField(max_length=50)
-    ra = models.IntegerField(unique=True)
-    password = models.CharField(max_length=150)
-    perfil = models.CharField(max_length=1, default="C")
-    ativo = models.BooleanField(default=True)
+#class Usuario(AbstractBaseUser):
+#     nome = models.CharField(max_length=50)
+#     ra = models.IntegerField(unique=True)
+#     password = models.CharField(max_length=150)
+#     perfil = models.CharField(max_length=1, default="C")
+#     ativo = models.BooleanField(default=True)
 
-    USERNAME_FIELD = 'ra'
-    REQUIRED_FIELDS = ['nome']
+#     USERNAME_FIELD = 'ra'
+#     REQUIRED_FIELDS = ['nome']
 
 
-    objects = UsuarioManager()
+#     objects = UsuarioManager()
 
-    @property
-    def is_staff(self):
-        return self.perfil == 'C'
+#     @property
+#     def is_staff(self):
+#         return self.perfil == 'C'
 
-    def has_perm(self, perm, obj=None):
-        return True
-    def has_module_perms(self,app_label):
-        return True
+#     def has_perm(self, perm, obj=None):
+#         return True
+#     def has_module_perms(self,app_label):
+#         return True
 
-    def get_short_name(self):
-        return self.nome
+#     def get_short_name(self):
+#         return self.nome
 
-    def get_full_name(self):
-        return self.nome
+#     def get_full_name(self):
+#         return self.nome
 
-    def __str__(self):
-        return self.nome
+#     def __str__(self):
+#         return self.nome
 
 #Função Curso com os campos que serão criados no banco de dados na tabela "Curso", e utilizados em outras funções como a área ADMIN
 class Curso(models.Model):
@@ -77,7 +77,7 @@ class Curso(models.Model):
         db_table = 'Curso'
 
 #Função Aluno com os campos que serão criados no banco de dados na tabela "Aluno", em conjunto com a tabele "Usuario", e utilizados em outras funções como a área ADMIN, tem relacionamento com tabela "Curso"
-class Aluno(Usuario):
+class Aluno(models.Model):
     curso = models.ForeignKey(to='Curso', related_name="alunos")
     turmas = models.ManyToManyField('Turma', db_table='Matricula', related_name='alunos', blank=True) #Uma turma pode ter vários alunos
     email = models.EmailField(max_length=254, default='')
