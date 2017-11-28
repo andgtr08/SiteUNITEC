@@ -8,19 +8,19 @@ from django import forms
 #Essas funções serão apresentadas no menu ADMIN do site
 
 #Função Novo Aluno, com quais campos serão requisitados
-class NovoAlunoForm(forms.ModelForm):
-    class Meta:	
-        model = Aluno    
-        fields = ('ra', 'nome','curso')
+# class NovoAlunoForm(forms.ModelForm):
+#     class Meta:	
+#         model = Aluno    
+#         fields = ('ra', 'nome','curso')
 
-    #Ao finalizar, já vem com uma senha pré-definida
-    def save(self, commit=True):
-        user = super(NovoAlunoForm, self).save(commit=False)
-        user.set_password('123@mudar')
-        user.perfil = 'A'        
-        if commit:           
-            user.save()        
-        return user
+#     #Ao finalizar, já vem com uma senha pré-definida
+#     def save(self, commit=True):
+#         user = super(NovoAlunoForm, self).save(commit=False)
+#         user.set_password('123@mudar')
+#         user.perfil = 'A'        
+#         if commit:           
+#             user.save()        
+#         return user
 
 #Função AlteraAluno, podendo alterar apenas Nome, e Curso
 class AlterarAlunoForm(forms.ModelForm):
