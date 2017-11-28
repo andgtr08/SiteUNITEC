@@ -21,4 +21,5 @@ urlpatterns = patterns('',
     url(r'^$', index, name="home"),
     url(r'^index/', index),
     url(r'^restrito/$', restrito, name='restrito'),
+    url(r'^ListaCursos/', ListaCurso), 
 )
