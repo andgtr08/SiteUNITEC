@@ -8,6 +8,7 @@ import os
 #mysqlconnlst = mysqlconnstr.split(';')
 #mysqlconndict = dict(s.split('=',1) for s in mysqlconnlst)
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
 
 DEBUG = True
