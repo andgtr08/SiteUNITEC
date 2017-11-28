@@ -215,7 +215,6 @@ class ArquivosQuestao(models.Model):
 
 #Função de resposta, tem relacionamento com Aluno, e Questão, sendo um campo obrigatório, geralmente criado por aluno, e enviado ao professor.
 class Resposta(models.Model):
-    aluno = models.ForeignKey(to='Aluno', related_name="respostas", null=False, blank=False)
     questao = models.ForeignKey(to='Questao', related_name="respostas", null=False, blank=False)
     data_avaliacao = models.DateField()
     nota = models.DecimalField(max_digits=4, decimal_places=2)
