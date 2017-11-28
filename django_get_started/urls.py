@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Definition of urls for django_get_started.
 """
