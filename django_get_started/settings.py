@@ -179,3 +179,22 @@ LOGGING = {
 
 # Specify the default test runner.
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_REDIRECT_URL = "/AreaAluno"
+LOGOUT_REDIRECT_URL = "home"
+
+# Email--------------
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# Configuração para Gmail
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'unitecfaculdade@gmail.com'
+EMAIL_HOST_PASSWORD = '123teste'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+
+
