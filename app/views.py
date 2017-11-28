@@ -14,7 +14,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.core.files.storage import FileSystemStorage
-from app.forms import DocumentForm
+from app.forms import *
 
 def index(request):
     return render(request, "index.html")
