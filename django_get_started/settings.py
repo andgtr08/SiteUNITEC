@@ -188,8 +188,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_REDIRECT_URL = "/AreaAluno"
 LOGOUT_REDIRECT_URL = "home"
 
-# Email--------------
+AUTH_USER_MODEL = 'app.Usuario'
 
+# Email--------------
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Configuração para Gmail
