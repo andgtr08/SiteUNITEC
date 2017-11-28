@@ -133,14 +133,14 @@ def simple_upload(request):
     return render(request, 'simple_upload.html')
 
 def restrito(request):
-    cursos = Curso.objects.all()
-    for curso in cursos:
-        curso.questoes = Questao.objects.filter(curso=curso)
+#    cursos = Curso.objects.all()
+#    for curso in cursos:
+#        curso.questoes = Questao.objects.filter(curso=curso)
 
-    contexto = {
-        "cursos":cursos
-    }
-    return render(request, "restrito.html",contexto)
+#    contexto = {
+#        "cursos":cursos
+#    }
+    return render(request, "restrito.html")
 
 def questao_form(request, sigla, questao_id=None):
     curso = Curso.objects.get(sigla=sigla)
