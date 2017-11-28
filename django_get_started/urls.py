@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^entrar/', login,{"template_name":"login.html"}, name="login"),
     url(r'^sair/', logout, name="logout"),
     url(r'^ListaCursos/', ListaCurso),   
-    url(r'^AreaAluno/', views.AreaAluno),      
+    url(r'^AreaAluno/', AreaAluno),      
     url(r'^Disciplinas/', Disciplinas),
     url(r'^noticia1/', noticia1),
     url(r'^noticia2/', noticia2),
