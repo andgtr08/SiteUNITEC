@@ -23,22 +23,22 @@ from django import forms
 #         return user
 
 #Função AlteraAluno, podendo alterar apenas Nome, e Curso
-class AlterarAlunoForm(forms.ModelForm):
-     class Meta:
-        model = Aluno         
-        fields = ('nome', 'curso')
+# class AlterarAlunoForm(forms.ModelForm):
+#      class Meta:
+#         model = Aluno         
+#         fields = ('nome', 'curso')
 
 #Função principal de criação de aluno, e a forma que será visualizado
-class AlunoAdmin(UserAdmin):
-    form = AlterarAlunoForm    
-    add_form = NovoAlunoForm
-    list_display = ('ra', 'nome', 'email', 'curso')
-    list_filter = ('perfil',)
-    fieldsets = ( (None, {'fields': ('ra', 'nome', 'email', 'curso')}),)
-    add_fieldsets = ((None, { 'fields': ('ra', 'nome', 'email', 'curso')} ),)
-    search_fields = ('ra',)
-    ordering = ('ra',)
-    filter_horizontal = ()
+#class AlunoAdmin(UserAdmin):
+#     form = AlterarAlunoForm    
+#     add_form = NovoAlunoForm
+#     list_display = ('ra', 'nome', 'email', 'curso')
+#     list_filter = ('perfil',)
+#     fieldsets = ( (None, {'fields': ('ra', 'nome', 'email', 'curso')}),)
+#     add_fieldsets = ((None, { 'fields': ('ra', 'nome', 'email', 'curso')} ),)
+#     search_fields = ('ra',)
+#     ordering = ('ra',)
+#     filter_horizontal = ()
 
 #Função Curso, e quais campos serão apresentados
 class CursoAdmin(admin.ModelAdmin):
@@ -96,7 +96,7 @@ class ArquivosRespostaAdmin(admin.ModelAdmin):
     list_display = ('resposta', 'id')
 
 #Relacionamentos entre funções e modelos criados no arquivo models.py
-admin.site.register(Aluno, AlunoAdmin)
+#admin.site.register(Aluno, AlunoAdmin)
 admin.site.register(Curso, CursoAdmin)
 admin.site.register(Disciplina, DisciplinaAdmin)
 admin.site.register(Professor, ProfessorAdmin)
