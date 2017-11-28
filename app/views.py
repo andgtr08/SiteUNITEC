@@ -16,3 +16,6 @@ def restrito(request):
 
 def ListaCurso(request):
     return render(request, "ListaCursos.html")
+
+def Noticias(request):
+    return render(request, "Noticias.html")
