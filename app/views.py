@@ -19,3 +19,6 @@ def ListaCurso(request):
 
 def Noticias(request):
     return render(request, "Noticias.html")
+
+def Contato(request):
+    return render(request, "Contato.html")
