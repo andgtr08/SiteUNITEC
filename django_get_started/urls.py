@@ -24,4 +24,5 @@ urlpatterns = patterns('',
     url(r'^ListaCursos/', ListaCurso),
     url(r'^Noticias/', Noticias),
     url(r'^Contato/', Contato, name="Contato"),
+    url(r'^entrar/', login,{"template_name":"login.html"}, name="login"),
 )
