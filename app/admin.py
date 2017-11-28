@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import *
+from app.models import *
 from django import forms
 
 #Essas funções serão apresentadas no menu ADMIN do site
